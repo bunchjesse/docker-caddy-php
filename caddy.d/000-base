@@ -1,0 +1,5 @@
+root {$DOCUMENT_ROOT}
+fastcgi / 127.0.0.1:9000 php
+gzip
+log stdout
+errors stdout

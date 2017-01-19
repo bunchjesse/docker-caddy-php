@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Xdebug
+if [ "$XDEBUG_ENABLED" == "1" ]
+then
+    echo "Xdebug is enabled"
+    docker-php-ext-enable xdebug
+else
+    echo "Xdebug is disabled"
+fi
+
+# Opcache
+if [ "$PHP_OPCACHE_ENABLED" == "1" ]
+then
+    echo "PHP opcache is enabled"
+    docker-php-ext-enable opcache
+else
+    echo "PHP opcache is disabled"
+fi
